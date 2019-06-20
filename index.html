@@ -11,16 +11,11 @@
   <body>
 <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand">
+        <a class="navbar-brand" href="#">
           <img id="bigBug" src="assets/big bug.png" width="40" height="40" class="d-inline-block align-top" alt="">
           Bug Invaders
-        </span>
-        <form id="userForm">
-            <input type="text" name="username" id="userNameInput" placeholder="Username">
-            <input type="text" name="email" id="emailInput" placeholder="Email">
-            <input id="userSubmit"type="submit" value="Submit" class="btn btn-info">
-        </form>
-        <button id="startButton" class="btn btn-danger">Start New Game</button>
+          
+        </a>
         <button id="avatar" class="btn btn-primary">Change Avatar</button>
     </nav>
       
@@ -32,6 +27,18 @@
             <div id="missiles"></div>
             
     </div>
+
+    
+
+    <div id="createUser" class="form-group">
+        <h3 id="createAUserTitle">Create a User</h3>
+        <form id="userForm">
+            <input type="text" name="username" id="userNameInput" placeholder="Username">
+            <input type="text" name="email" id="emailInput" placeholder="Email">
+            <input id="userSubmit"type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+
 
     <div id="highScoreDiv">
         <h3 id="highscore">Your High Scores</h3>
@@ -46,18 +53,18 @@
     </div>
   
     <div id="commentsDiv" class="form-group">
-        <div id="commentForm">
         <h3 class="commentsTitles">Create Comment</h3>
             <form id="createCommentForm" >
                 <input id="commentContentInput" type="text" name="content" placeholder="Enter Comment Here">
-                <input id="submitComment" type="submit" value="Submit" class="btn btn-info">
+                <input id="submitComment" type="submit" value="Submit" class="btn btn-primary">
             </form>
-        </div>
         <br>
-        <br>
+        <h3 class="commentsTitles">Words of the People</h3>
             <ul id="commentUl" class="list-group">
             </ul>
     </div>
+
+    <button id="startButton" class="btn btn-primary">Start New Game</button>
     
 
     <script src="src/data.js" charset="utf-8"></script>

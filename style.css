@@ -35,6 +35,11 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
   
   html {
     font-family: sans-serif;
@@ -53,12 +58,9 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #fff;
+    color: #212529;
     text-align: left;
-    background: url("https://wallpaperplay.com/walls/full/f/b/a/77507.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: visible;
+    background-image: url("assets/scratchblue.jpg");
     background-attachment: fixed;
     
   }
@@ -244,7 +246,6 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    color: white;
   }
   
   button,
@@ -2423,14 +2424,14 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #29c2ff;
-    border-color: #29c2ff;
+    background-color: #007bff;
+    border-color: #007bff;
   }
   
   .btn-primary:hover {
     color: #fff;
-    background-color: #1d8ab6;
-    border-color: #1d8ab6;
+    background-color: #0069d9;
+    border-color: #0062cc;
   }
   
   .btn-primary:focus, .btn-primary.focus {
@@ -2525,14 +2526,14 @@
   
   .btn-info {
     color: #fff;
-    background-color: #cc5334;
-    border-color: #cc5334;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
   }
   
   .btn-info:hover {
     color: #fff;
-    background-color: #9b351c;
-    border-color: #9b351c;
+    background-color: #138496;
+    border-color: #117a8b;
   }
   
   .btn-info:focus, .btn-info.focus {
@@ -4182,9 +4183,9 @@
     white-space: nowrap;
   }
   
-  /* .navbar-brand:hover, .navbar-brand:focus {
+  .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
-  } */
+  }
   
   .navbar-nav {
     display: -ms-flexbox;
@@ -4457,12 +4458,12 @@
   }
   
   .navbar-light .navbar-brand {
-    color: rgba(255, 255, 255);
+    color: rgba(0, 0, 0, 0.9);
   }
   
-  /* .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+  .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9);
-  } */
+  }
   
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
@@ -5355,7 +5356,9 @@
     display: block;
     padding: 0.75rem 1.25rem;
     margin-bottom: -1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px;
+    border: 1px solid black; */
+    background-color: rgb(22, 162, 184);
   }
   
   .list-group-item:first-child {
@@ -6571,7 +6574,7 @@
   }
   
   .bg-light {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(23, 162, 184) !important;
   }
   
   a.bg-light:hover, a.bg-light:focus,
@@ -10112,57 +10115,62 @@
 }
 
 #startButton{
-  height: auto;
-  width: auto;
-  position: absolute;
-  font-size: 1.2em;
-  padding: 15px;
-  border-radius: 25px;
-  left: 45.5%;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 230px;
+    left: 1300px;
+    font-size: 1.69em;
+    padding: 15px;
+    border-radius: 25px;
+        
 }
 
    
 
     #createAUserTitle {
-      font-size: 1.50em;
-      width: 30%;
-      display: inline;
-    }
-
-    #createUser{
-        height: auto;
-        position: absolute;
-        top: 140px;
-        left: 180px;
-        font-size: 1.80em;
-        background-color: #16a2b8;
-        padding: 35px;
+        font-size: 1em;
+        width: 28%;
+        margin: 20px;
+        background-color: white;
+        padding: 10px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
         border-color: black;
-        display: inline;
+        text-align: center;
+        
+    }
+
+    #createUser{
+        height: auto;
+        width: 40%;
+        position: absolute;
+        top: 120px;
+        left: 250px;
+        color: black; 
+        font-size: 1.80em;
     }
 
 
     #userNameInput{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: white;
         padding: 15px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
-        border-color: #34be7e;
+        border-color: black;
         
     }
 
 
     #emailInput{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: white;
         padding: 15px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
-        border-color: #aca112;
+        border-color: black;
     }
 
     #userSubmit{
@@ -10183,7 +10191,7 @@
         position: absolute;
         top: 1400px;
         left: 300px; 
-        color: white;
+        color: black;
         /* padding: 15px;
         border-radius: 25px;
         border-style: solid;
@@ -10192,52 +10200,35 @@
     }
 
     #commentUl{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgb(22, 162, 184);
         margin: 30px;
         padding: 15px;
         border-radius: 25px;
         border-style: solid;
-        border-width: 10px;
-        border-image: linear-gradient(to right, #10712e 0%, #d8dd3b 25%, #c40611 50%, #265296 75%, #1483ba 100%);
-        border-image-slice: 1;
+        border-width: 5px;
+        border-color: black;
     }
 
     /* work on */
     .commentsTitles{
         font-size: 1.10em;
         width: 30%;
-        display: inline;
-    }
-
-    #commentForm{
-      font-size: 1.10em;
-        width: 30%;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 35px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 25px;
         border-style: solid;
-        border-width: 10px;
-        border-image: linear-gradient(to right, #10712e 0%, #d8dd3b 50%, #c40611 100%);
-        border-image-slice: 1;
-        display: inline;
-    }
+        border-width: 5px;
+        border-color: black;
 
-    #userForm{
-      display: inline;
-      position: absolute;
-      left: 17%;
-      font-size: 1.5rem;
-    }
-
-    #createCommentForm{
-      display: inline-block;
     }
 
     #commentContentInput{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: white;
         padding: 15px;
+        border-radius: 25px;
         border-style: solid;
         border-width: 5px;
-        border-color: #58595a;
+        border-color: black;
     }
 
     #submitComment{
@@ -10253,11 +10244,12 @@
         top: 400px;
         left: 2200px; 
         display: inline;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: white;
         padding: 15px;
+        border-radius: 25px;
         border-style: solid;
-        border-width: 10px;
-        border-color: #1c8fbd;
+        border-width: 5px;
+        border-color: black;
     }
 
     #allTimeHighScores {
@@ -10266,11 +10258,12 @@
         top: 400px;
         left: 1800px; 
         display: inline;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: white;
         padding: 15px;
+        border-radius: 25px;
         border-style: solid;
-        border-width: 10px;
-        border-color: #272c8a;
+        border-width: 5px;
+        border-color: black;
     }
 
     #bigBug{
@@ -10287,7 +10280,7 @@
 
     #avatar{
         left: 80%; 
-        font-size: 1.3em;
+        font-size: .5em;
         padding: 15px;
         border-radius: 25px;
     }
