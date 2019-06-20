@@ -1,10 +1,15 @@
 let score = 0
 let gameStatus = false
 let lives = 5
+
 document.addEventListener("DOMContentLoaded", function(){
     document.addEventListener("keydown", actions)
+
     const startBtn = document.getElementById("startButton")
     startBtn.addEventListener("click", gameStart)
+
+    const aboutButton = document.getElementById("about")
+    aboutButton.addEventListener("click", aboutButtonInfo)
 
 
     
@@ -37,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function(){
         scoreDisplaySpan.innerText = parseInt(scoreDisplaySpan.innerText) + 10 
         score = scoreDisplaySpan.innerText
         if(score == 250){
+            blast()
+        } else if (score == 500){
+            blast()
+        } else if (score == 1000){
+            blast()
+        } else if (score == 2000){
             blast()
         }
         console.log(score)
@@ -125,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function(){
    
     function createEnemies() {
         for(i=0; i < getRandomArbitrary(1, 10) ; i++){
-        enemies.push({top: 200, left: getRandomArbitrary(400, 1300)})
+        enemies.push({top: 200, left: Math.round((getRandomArbitrary(400, 1300)))})
         }
     }
 
@@ -201,25 +212,25 @@ document.addEventListener("DOMContentLoaded", function(){
     
     ////confetti/////
     function blast(){
-    var end = Date.now() + (10 * 1000);
+            var end = Date.now() + (10 * 1000);
 
-    var interval = setInterval(function() {
-    if (Date.now() > end) {
-        return clearInterval(interval);
-    }
+            var interval = setInterval(function() {
+                if (Date.now() > end) {
+                    return clearInterval(interval);
+            }
 
 
-    confetti({
-        startVelocity: 30,
-        spread: 360,
-        ticks: 60,
-        origin: {
-            x: Math.random(),
-            // since they fall down, start a bit higher than random
-            y: Math.random() - 0.2
-        }
-    });
-}, 200);
+            confetti({
+                startVelocity: 30,
+                spread: 360,
+                ticks: 60,
+                origin: {
+                    x: Math.random(),
+                    // since they fall down, start a bit higher than random
+                    y: Math.random() - 0.2
+                }
+            });
+        }, 200);
     }
     
 
@@ -245,13 +256,19 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log(hero)
     }) 
 
-
-    
-
-
-
-    
-
+    function aboutButtonInfo() {
+        if (!document.getElementById("infoDiv")) {
+        const body = document.querySelector("body")
+        const infoDiv = document.createElement("div")
+        infoDiv.id = "infoDiv"
+        const p = document.createElement("p")
+        p.innerText = "Welcome to Bug Invaders! We have created an old school arcade style game, where the objective is to use your avatar to eliminate as many computer bugs as possible! Use the spacebar to shoot and the left and right arrow keys to move. The game is written with only Javascript/HTML/CSS and stores the data using a Rails backend server. We hope you enjoy playing our game!"
+        infoDiv.append(p)
+        body.append(infoDiv)
+        } else {
+            infoDiv.remove()
+        }
+    }
 
 })
 

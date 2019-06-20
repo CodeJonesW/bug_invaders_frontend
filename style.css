@@ -52,18 +52,20 @@
     display: block;
   }
   
-  body {
-    margin: 0;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-image: url("assets/scratchblue.jpg");
-    background-attachment: fixed;
-    
-  }
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      background: url("assets/scratchblue.jpg") no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow: visible;
+      
+    }
   
   [tabindex="-1"]:focus {
     outline: 0 !important;
@@ -4061,6 +4063,8 @@
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    
+    
   }
   
   .nav-link {
@@ -5358,7 +5362,9 @@
     margin-bottom: -1px;
     /* border-radius: 10px;
     border: 1px solid black; */
-    background-color: rgb(22, 162, 184);
+    /* background-color: rgb(22, 162, 184); */
+    background-color: white;
+    opacity: .7;
   }
   
   .list-group-item:first-child {
@@ -10092,66 +10098,75 @@
 }
 
 #currentScoreDiv {
-    height: 110px;
-    width: 120px;
+    opacity: 0.5;
+    height: 190px;
+    width: 160px;
     position: absolute;
     top: 370px;
     left: 250px;
     font-family: 'Audiowide', cursive;
     font-size: 2.17em;
-    
-}
-
-#currentLivesDiv {
-    
-    height: 110px;
-    width: 120px;
-    position: absolute;
-    top: 370px;
-    left: 1525px;
-    font-family: 'Audiowide', cursive;
-    font-size: 2.17em;
-    color: green;
-}
-
-#startButton{
-    height: auto;
-    width: auto;
-    position: absolute;
-    top: 230px;
-    left: 1300px;
-    font-size: 1.69em;
+    background-color: white;
     padding: 15px;
+    width: 190px;
     border-radius: 25px;
-        
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    
 }
 
-   
-
-    #createAUserTitle {
-        font-size: 1em;
-        width: 28%;
-        margin: 20px;
+    #currentLivesDiv {
+        opacity: 0.5;
+        height: 95px;
+        width: 120px;
+        position: absolute;
+        top: 375px;
+        left: 1490px;
+        font-family: 'Audiowide', cursive;
+        font-size: 2.17em;
+        color: green;
         background-color: white;
-        padding: 10px;
+        padding: 15px;
+        width: 190px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
         border-color: black;
+    }
+
+    #startButton{
+        height: auto;
+        width: auto;
+        position: absolute;
+        left: 55%;
+        top: 1320px;
+        font-size: 1.39em;
+        padding: 15px;
+        border-radius: 25px;
+        font-family: 'Audiowide', cursive;
+            
+    }
+
+   
+
+  
+    #createAUserTitle{
+        position: absolute;
+        left: 57%;
+        width: 9%;
+        color: black; 
+        font-size: 1.8em;
+        padding: 10px;
         text-align: center;
         
     }
 
-    #createUser{
-        height: auto;
-        width: 40%;
-        position: absolute;
-        top: 120px;
-        left: 250px;
-        color: black; 
-        font-size: 1.80em;
-    }
 
+    #userForm {
+      left: 66%;
+      position: absolute;
+    }
 
     #userNameInput{
         background-color: white;
@@ -10181,6 +10196,8 @@
         position: inline;
         padding: 15px;
         border-radius: 25px;
+        font-family: 'Audiowide', cursive;
+
     }
 
     /* work on */
@@ -10192,15 +10209,12 @@
         top: 1400px;
         left: 300px; 
         color: black;
-        /* padding: 15px;
-        border-radius: 25px;
-        border-style: solid;
-        border-width: 5px;
-        border-color: black; */
+        opacity: .9;
     }
 
     #commentUl{
-        background-color: rgb(22, 162, 184);
+        /* background-color: rgb(22, 162, 184); */
+        background-color: white;
         margin: 30px;
         padding: 15px;
         border-radius: 25px;
@@ -10236,12 +10250,14 @@
         border-radius: 30px;
         font-size: .7em;
         color: white; 
+        font-family: 'Audiowide', cursive;
     }
 
     #highScoreDiv {
+        margin: 10px;
         font-size: 2.0em;
         position: absolute;
-        top: 400px;
+        top: 440px;
         left: 2200px; 
         display: inline;
         background-color: white;
@@ -10250,16 +10266,19 @@
         border-style: solid;
         border-width: 5px;
         border-color: black;
+        opacity: 0.9;
     }
 
     #allTimeHighScores {
+        opacity: 0.9;
         font-size: 2.0em;
         position: absolute;
-        top: 400px;
+        top: 450px;
         left: 1800px; 
         display: inline;
         background-color: white;
         padding: 15px;
+        width: 400px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
@@ -10279,8 +10298,37 @@
 
 
     #avatar{
-        left: 80%; 
-        font-size: .5em;
+        top: 1320px;
+        left: 65%; 
+        font-size: 1.39em;
         padding: 15px;
         border-radius: 25px;
+        position: absolute;
+        font-family: 'Audiowide', cursive;
+    }
+
+    #about {
+        left: 94.3%; 
+        font-size: 1.16em;
+        padding: 15px;
+        border-radius: 25px;
+        position: absolute;
+    }
+
+    #infoDiv {
+      opacity: .95;
+      left: 68%; 
+      top: 8%;
+      font-size: 1.6em;
+      padding: 15px;
+      border-radius: 25px;
+      position: absolute;
+      background-color: white;
+      padding: 15px;
+      height: 310px;
+      width: 800px;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 5px;
+      border-color: black;
     }

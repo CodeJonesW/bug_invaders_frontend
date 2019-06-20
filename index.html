@@ -16,7 +16,16 @@
           Bug Invaders
           
         </a>
-        <button id="avatar" class="btn btn-primary">Change Avatar</button>
+        <h3 id="createAUserTitle">Create User:</h3>
+        <form id="userForm">
+                <input type="text" name="username" id="userNameInput" placeholder="Username">
+                <input type="text" name="email" id="emailInput" placeholder="Email">
+                <input id="userSubmit"type="submit" value="Submit" class="btn btn-primary">
+            </form>
+       
+        <button id="about" class="btn btn-primary">About</button>
+        
+
     </nav>
       
     <div id="background">
@@ -30,14 +39,14 @@
 
     
 
-    <div id="createUser" class="form-group">
+    <!-- <div id="createUser" class="form-group">
         <h3 id="createAUserTitle">Create a User</h3>
         <form id="userForm">
             <input type="text" name="username" id="userNameInput" placeholder="Username">
             <input type="text" name="email" id="emailInput" placeholder="Email">
             <input id="userSubmit"type="submit" value="Submit" class="btn btn-primary">
         </form>
-    </div>
+    </div> -->
 
 
     <div id="highScoreDiv">
@@ -63,9 +72,8 @@
             <ul id="commentUl" class="list-group">
             </ul>
     </div>
-
+    <button id="avatar" class="btn btn-primary">Change Avatar</button>
     <button id="startButton" class="btn btn-primary">Start New Game</button>
-    
 
     <script src="src/data.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.2.1/dist/confetti.browser.min.js"></script>
