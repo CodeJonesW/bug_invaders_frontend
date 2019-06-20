@@ -35,11 +35,6 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
   
   html {
     font-family: sans-serif;
@@ -58,9 +53,12 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #fff;
     text-align: left;
-    background-image: url("assets/scratchblue.jpg");
+    background: url("https://wallpaperplay.com/walls/full/f/b/a/77507.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: visible;
     background-attachment: fixed;
     
   }
@@ -246,6 +244,7 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    color: white;
   }
   
   button,
@@ -2424,14 +2423,14 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #29c2ff;
+    border-color: #29c2ff;
   }
   
   .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #1d8ab6;
+    border-color: #1d8ab6;
   }
   
   .btn-primary:focus, .btn-primary.focus {
@@ -2526,14 +2525,14 @@
   
   .btn-info {
     color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: #cc5334;
+    border-color: #cc5334;
   }
   
   .btn-info:hover {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+    background-color: #9b351c;
+    border-color: #9b351c;
   }
   
   .btn-info:focus, .btn-info.focus {
@@ -4183,9 +4182,9 @@
     white-space: nowrap;
   }
   
-  .navbar-brand:hover, .navbar-brand:focus {
+  /* .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
-  }
+  } */
   
   .navbar-nav {
     display: -ms-flexbox;
@@ -4458,12 +4457,12 @@
   }
   
   .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255);
   }
   
-  .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+  /* .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9);
-  }
+  } */
   
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
@@ -5356,9 +5355,7 @@
     display: block;
     padding: 0.75rem 1.25rem;
     margin-bottom: -1px;
-    /* border-radius: 10px;
-    border: 1px solid black; */
-    background-color: rgb(22, 162, 184);
+    background-color: rgba(0, 0, 0, 0.1);
   }
   
   .list-group-item:first-child {
@@ -6574,7 +6571,7 @@
   }
   
   .bg-light {
-    background-color: rgb(23, 162, 184) !important;
+    background-color: rgba(0, 0, 0, 0.8);
   }
   
   a.bg-light:hover, a.bg-light:focus,
@@ -10115,62 +10112,57 @@
 }
 
 #startButton{
-    height: auto;
-    width: auto;
-    position: absolute;
-    top: 230px;
-    left: 1300px;
-    font-size: 1.69em;
-    padding: 15px;
-    border-radius: 25px;
-        
+  height: auto;
+  width: auto;
+  position: absolute;
+  font-size: 1.2em;
+  padding: 15px;
+  border-radius: 25px;
+  left: 45.5%;
 }
 
    
 
     #createAUserTitle {
-        font-size: 1em;
-        width: 28%;
-        margin: 20px;
-        background-color: white;
-        padding: 10px;
-        border-radius: 25px;
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
-        text-align: center;
-        
+      font-size: 1.50em;
+      width: 30%;
+      display: inline;
     }
 
     #createUser{
         height: auto;
-        width: 40%;
         position: absolute;
-        top: 120px;
-        left: 250px;
-        color: black; 
+        top: 140px;
+        left: 180px;
         font-size: 1.80em;
-    }
-
-
-    #userNameInput{
-        background-color: white;
-        padding: 15px;
+        background-color: #16a2b8;
+        padding: 35px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
         border-color: black;
+        display: inline;
+    }
+
+
+    #userNameInput{
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        border-radius: 25px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #34be7e;
         
     }
 
 
     #emailInput{
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 15px;
         border-radius: 25px;
         border-style: solid;
         border-width: 5px;
-        border-color: black;
+        border-color: #aca112;
     }
 
     #userSubmit{
@@ -10191,7 +10183,7 @@
         position: absolute;
         top: 1400px;
         left: 300px; 
-        color: black;
+        color: white;
         /* padding: 15px;
         border-radius: 25px;
         border-style: solid;
@@ -10200,35 +10192,52 @@
     }
 
     #commentUl{
-        background-color: rgb(22, 162, 184);
+        background-color: rgba(0, 0, 0, 0.8);
         margin: 30px;
         padding: 15px;
         border-radius: 25px;
         border-style: solid;
-        border-width: 5px;
-        border-color: black;
+        border-width: 10px;
+        border-image: linear-gradient(to right, #10712e 0%, #d8dd3b 25%, #c40611 50%, #265296 75%, #1483ba 100%);
+        border-image-slice: 1;
     }
 
     /* work on */
     .commentsTitles{
         font-size: 1.10em;
         width: 30%;
-        background-color: white;
-        padding: 15px;
-        border-radius: 25px;
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
+        display: inline;
+    }
 
+    #commentForm{
+      font-size: 1.10em;
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 35px;
+        border-style: solid;
+        border-width: 10px;
+        border-image: linear-gradient(to right, #10712e 0%, #d8dd3b 50%, #c40611 100%);
+        border-image-slice: 1;
+        display: inline;
+    }
+
+    #userForm{
+      display: inline;
+      position: absolute;
+      left: 17%;
+      font-size: 1.5rem;
+    }
+
+    #createCommentForm{
+      display: inline-block;
     }
 
     #commentContentInput{
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 15px;
-        border-radius: 25px;
         border-style: solid;
         border-width: 5px;
-        border-color: black;
+        border-color: #58595a;
     }
 
     #submitComment{
@@ -10244,12 +10253,11 @@
         top: 400px;
         left: 2200px; 
         display: inline;
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 15px;
-        border-radius: 25px;
         border-style: solid;
-        border-width: 5px;
-        border-color: black;
+        border-width: 10px;
+        border-color: #1c8fbd;
     }
 
     #allTimeHighScores {
@@ -10258,12 +10266,11 @@
         top: 400px;
         left: 1800px; 
         display: inline;
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 15px;
-        border-radius: 25px;
         border-style: solid;
-        border-width: 5px;
-        border-color: black;
+        border-width: 10px;
+        border-color: #272c8a;
     }
 
     #bigBug{
@@ -10280,7 +10287,7 @@
 
     #avatar{
         left: 80%; 
-        font-size: .5em;
+        font-size: 1.3em;
         padding: 15px;
         border-radius: 25px;
     }
