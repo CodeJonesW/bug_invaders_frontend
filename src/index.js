@@ -12,25 +12,25 @@ document.addEventListener("DOMContentLoaded", function(){
     aboutButton.addEventListener("click", aboutButtonInfo)
 
 
-    
 
     let missiles = [];
     let enemies = [];
     
     
 
-    function gameStart(){
+   function gameStart(){
         if (user_id === 0){
             alert("Sign in to play!")
         }else{
-            missiles = []
-            gameStatus = true
-            startBtn.disabled = true
-        createEnemies()
-        gameLoop()
+            alert("Use the left and right arrow keys to move and the spacebar to shoot! Your game will begin when you press enter or hit okay!")
+                missiles = []
+                gameStatus = true
+                startBtn.disabled = true
+                createEnemies()
+                gameLoop()
+            
         }
     }
-    
 
     function getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     function actions(e){
+        // console.log(e.which)
             if (e.keyCode === 37 && gameStatus === true) {
                 e.preventDefault()
                 // console.log(hero.left)
@@ -109,7 +110,11 @@ document.addEventListener("DOMContentLoaded", function(){
                     top: hero.top + 10 
                 })
                 drawMissiles()
-                // console.log(missiles)
+                
+            } else if (e.keyCode === 38 && gameStatus === true){
+                e.preventDefault()
+            } else if (e.keyCode === 40 && gameStatus === true){
+                e.preventDefault()
             }
     }
 

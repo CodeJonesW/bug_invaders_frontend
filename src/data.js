@@ -84,7 +84,7 @@ const allTimeHighScoresUl = document.getElementById("allTimeHighScoresUl")
 
     function createComment(e){
         e.preventDefault()
-        if (user_id === 0 && game_id === 0) {
+        if (user_id === 0 || game_id === 0) {
             alert("You must create a user and play a game to leave a comment!")
         } else {
         const commentInput = document.getElementById("commentContentInput")

@@ -10332,3 +10332,10 @@
       border-width: 5px;
       border-color: black;
     }
+
+    #timerDiv {
+      position: absolute;
+      left: 37%;
+      top: 70%;
+      font-size: 1.6em;
+    }
