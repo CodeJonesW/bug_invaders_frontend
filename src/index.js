@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (user_id === 0){
             alert("Sign in to play!")
         }else{
+            window.scrollTo({top: 300, left: 200});
             alert("Use the left and right arrow keys to move and the spacebar to shoot! Your game will begin when you press enter or hit okay!")
                 missiles = []
                 gameStatus = true
