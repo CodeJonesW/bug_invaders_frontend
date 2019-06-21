@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (user_id === 0){
             alert("Sign in to play!")
         }else{
-            alert("Game will begin now!")
+            alert(" Use the left and right arrow keys to move and the spacebar to shoot! Your game will begin now!")
                 missiles = []
                 gameStatus = true
                 startBtn.disabled = true
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     function actions(e){
+        // console.log(e.which)
             if (e.keyCode === 37 && gameStatus === true) {
                 e.preventDefault()
                 // console.log(hero.left)
@@ -109,8 +110,8 @@ document.addEventListener("DOMContentLoaded", function(){
                     top: hero.top + 10 
                 })
                 drawMissiles()
-                // console.log(missiles)
-            }
+                
+            } 
     }
 
     function drawMissiles(){
