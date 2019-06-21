@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (user_id === 0){
             alert("Sign in to play!")
         }else{
-            alert(" Use the left and right arrow keys to move and the spacebar to shoot! Your game will begin now!")
+            alert("Use the left and right arrow keys to move and the spacebar to shoot! Your game will begin now!")
                 missiles = []
                 gameStatus = true
                 startBtn.disabled = true
