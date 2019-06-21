@@ -12,25 +12,25 @@ document.addEventListener("DOMContentLoaded", function(){
     aboutButton.addEventListener("click", aboutButtonInfo)
 
 
-    
 
     let missiles = [];
     let enemies = [];
     
     
 
-    function gameStart(){
+   function gameStart(){
         if (user_id === 0){
             alert("Sign in to play!")
         }else{
-            missiles = []
-            gameStatus = true
-            startBtn.disabled = true
-        createEnemies()
-        gameLoop()
+            alert("Game will begin now!")
+                missiles = []
+                gameStatus = true
+                startBtn.disabled = true
+                createEnemies()
+                gameLoop()
+            
         }
     }
-    
 
     function getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
