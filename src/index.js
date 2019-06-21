@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (!document.getElementById("infoDiv")) {
         const body = document.querySelector("body")
         const infoDiv = document.createElement("div")
+        const aboutBtn = document.getElementById("about")
         infoDiv.id = "infoDiv"
         const p = document.createElement("p")
         p.innerText = "Welcome to Bug Invaders! We have created an old school arcade style game, where the objective is to use your avatar to eliminate as many computer bugs as possible! Use the spacebar to shoot and the left and right arrow keys to move. The game is written with only Javascript/HTML/CSS and stores the data using a Rails backend server. We hope you enjoy playing our game!"
