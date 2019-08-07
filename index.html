@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Bug Invaders</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Share+Tech+Mono&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide|Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-<!-- Image and text -->
+    <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img id="bigBug" src="assets/big bug.png" width="40" height="40" class="d-inline-block align-top" alt="">
-          Bug Invaders
-          
-        </a>
-        <h3 id="createAUserTitle">Create User:</h3>
-        <form id="userForm">
-                <input type="text" name="username" id="userNameInput" placeholder="Username">
-                <input type="text" name="email" id="emailInput" placeholder="Email">
-                <input id="userSubmit"type="submit" value="Submit" class="btn btn-primary">
-            </form>
-       
-        <button id="about" class="btn btn-primary">About</button>
-        
+      <a class="navbar-brand" href="#">
+        <img
+          id="bigBug"
+          src="assets/big bug.png"
+          width="40"
+          height="40"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Bug Invaders
+      </a>
+      <h3 id="createAUserTitle">Create User:</h3>
+      <form id="userForm">
+        <input
+          type="text"
+          name="username"
+          id="userNameInput"
+          placeholder="Username"
+        />
+        <input type="text" name="email" id="emailInput" placeholder="Email" />
+        <input
+          id="userSubmit"
+          type="submit"
+          value="Submit"
+          class="btn btn-primary"
+        />
+      </form>
 
+      <button id="about" class="btn btn-primary">About</button>
     </nav>
-      
-    <div id="background">
-        <div id="timerDiv"></div>
-        <div id="currentScoreDiv" class="container">Current Score: <span id="currentScoreSpan">0</span></div>
-        <div id="currentLivesDiv" class="container">Lives: <span id="currentLivesSpan">5</span></div>
-            <div id="hero"></div>
-            <div id="enemy"></div>
-            <div id="missiles"></div>
-            
-    </div>
 
-    
+    <div id="background">
+      <div id="timerDiv"></div>
+      <div id="currentScoreDiv" class="container">
+        Current Score: <span id="currentScoreSpan">0</span>
+      </div>
+      <div id="currentLivesDiv" class="container">
+        Lives: <span id="currentLivesSpan">5</span>
+      </div>
+      <div id="hero"></div>
+      <div id="enemy"></div>
+      <div id="missiles"></div>
+    </div>
 
     <!-- <div id="createUser" class="form-group">
         <h3 id="createAUserTitle">Create a User</h3>
@@ -49,29 +70,35 @@
         </form>
     </div> -->
 
-
     <div id="highScoreDiv">
-        <h3 id="highscore">Your High Scores</h3>
-        <ul id="highscoreUl">
-        </ul>
+      <h3 id="highscore">Your High Scores</h3>
+      <ul id="highscoreUl"></ul>
     </div>
 
     <div id="allTimeHighScores">
-        <h3>All Time Highscores</h3>
-        <ul id="allTimeHighScoresUl">
-        </ul>
+      <h3>All Time Highscores</h3>
+      <ul id="allTimeHighScoresUl"></ul>
     </div>
-  
+
     <div id="commentsDiv" class="form-group">
-        <h3 class="commentsTitles">Create Comment</h3>
-            <form id="createCommentForm" >
-                <input id="commentContentInput" type="text" name="content" placeholder="Enter Comment Here">
-                <input id="submitComment" type="submit" value="Submit" class="btn btn-primary">
-            </form>
-        <br>
-        <h3 class="commentsTitles">Words of the People</h3>
-            <ul id="commentUl" class="list-group">
-            </ul>
+      <h3 class="commentsTitles">Create Comment</h3>
+      <form id="createCommentForm">
+        <input
+          id="commentContentInput"
+          type="text"
+          name="content"
+          placeholder="Enter Comment Here"
+        />
+        <input
+          id="submitComment"
+          type="submit"
+          value="Submit"
+          class="btn btn-primary"
+        />
+      </form>
+      <br />
+      <h3 class="commentsTitles">Words of the People</h3>
+      <ul id="commentUl" class="list-group"></ul>
     </div>
     <button id="avatar" class="btn btn-primary">Change Avatar</button>
     <button id="startButton" class="btn btn-primary">Start New Game</button>
@@ -79,11 +106,42 @@
     <script src="src/data.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.2.1/dist/confetti.browser.min.js"></script>
     <script src="src/index.js" charset="utf-8"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDX81s2gYYONOcKRArzTgJgbZWJVBc1esI",
+        authDomain: "bug-invaders.firebaseapp.com",
+        databaseURL: "https://bug-invaders.firebaseio.com",
+        projectId: "bug-invaders",
+        storageBucket: "",
+        messagingSenderId: "273654351208",
+        appId: "1:273654351208:web:1a3c17551e2e0ce0"
+      }
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig)
+    </script>
   </body>
-  
 </html>
